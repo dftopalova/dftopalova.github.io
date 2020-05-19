@@ -1,0 +1,337 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<style>
+			.ne-znam-posle-shte-go-mislq {
+				margin-top: 20px;
+				height: 200px;
+			}
+
+			.pagination {
+				margin-left: 450px;
+				padding: 10px;
+				display: inline-block;
+			}
+
+			.pagination a {
+				color: black;
+				float: left;
+				padding: 8px 16px;
+				text-decoration: none;
+				transition: background-color .3s;
+				border: 1px solid #ddd;
+				margin: 0 4px;
+			}
+
+			.pagination a.active {
+				background-color: #fab700;
+				color: white;
+				border: 1px solid #fab700;
+			}
+
+			.pagination a:hover:not(.active) {background-color: #ddd;}
+		</style>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Find A Buddy</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>
+			  <header id="header" id="home">
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+						<div id="logo">
+							<a href="index.html" style="color:white">Find a Buddy</a>
+						</div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="index.html">Home</a></li>
+				          <!--<li><a href="about.html">About Us</a></li>-->
+						  <li><a href="cats.html">Adopt Us</a></li>
+				          <li><a href="dogs.html">Add Pet</a></li>
+				          <li><a href="volunteer.html">Pet Helper</a></li>					          
+				          <li><a href="contact.html">My Profile</a></li>				              
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Adopt Us				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="cats.html"> Adopt Us</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Filter Area -->
+			<section class="Filter-form-area">
+				<div class="container">
+					<form class="ne-znam-posle-shte-go-mislq">
+						<fieldset class="form-group">
+							<legend>Filters</legend>
+						</fieldset>
+						<fieldset class="form-group">
+							<label for="animal">Animals:</label>
+							<div class="form-group">
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio1" value="option1"> Dogs
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio2" value="option2"> Cats
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio3" value="option3"> Bunnies
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio4" value="option4"> Birds
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio5" value="option5"> Hamsters
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio6" value="option6"> Turtles
+									</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" name="inlinecheckbox" id="inlineRadio7" value="option7"> Others
+									</label>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="form-group">
+							<label for="animal-gender">Gender:</label>
+							<div class="form-group" id="animal-gender">
+								<div class="form-radio">
+									<label class="form-radio-label">
+										<input class="form-radio-input" type="radio" name="gender" id="male" value="male"> Male
+									</label>
+								</div>
+								<div class="form-radio">
+									<label class="form-radio-label">
+										<input class="form-radio-input" type="radio" name="gender" id="female" value="female"> Female
+									</label>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="form-group">
+							<label for="animal-age">Age (0 - 10 years) :</label>
+							<div class="form-group">
+								<div class="form-age">
+									<label class="form-age-label">
+										<input class="form-age-input" type="range" name="age" id="age" min="0" max="10">
+									</label>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+			<!-- End Filter Area -->
+
+
+
+			<!-- Start cat-list Area -->
+			<section class="cat-list-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct1.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Syso</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct2.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Eddie</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct3.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Timy</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct4.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Pete</div>
+							  </div>
+							</div>
+						</div>	
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct5.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Kate</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct6.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Tom</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct7.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Cinnamon</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="img/ct8.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Mario</div>
+							  </div>
+							</div>
+						</div>												
+					</div>
+				</div>
+				<div class="pagination">
+					<a href="#">&laquo;</a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">&raquo;</a>
+				</div>	
+			</section>
+			<!-- End cat-list Area -->
+
+
+			<!-- start footer Area -->		
+			<footer class="footer-area">
+				<div class="container">
+					<div class="row pt-20 pb-20">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p>
+									Make adoption your only option!<br>  This is the message we want to send to our users.
+									We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. 
+									So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one. 
+								</p>
+							</div>
+						</div>				
+						<div class="col-lg-4  col-md-6">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Contact Us</h6>
+								<ul class="list-contact">
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-home"></span>
+										</div>
+										<div class="detail">
+											<h4>Sofia, Bulgaria</h4>
+											<p>
+												bul. „James Boucher“ 5, 1164 Lozenets</p>
+										</div>	
+									</li>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-phone-handset"></span>
+										</div>
+										<div class="detail">
+											<h4>02 816 1542</h4>
+											<p>
+												Mon to Fri 9am to 6 pm
+											</p>
+										</div>	
+									</li>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-envelope"></span>
+										</div>
+										<div class="detail">
+											<h4>pchmi@fmi-uni.bg</h4>
+											<p>
+												Send us your query anytime!
+											</p>
+										</div>	
+									</li>																		
+								</ul>
+							</div>
+						</div>						
+					</div>
+				</div>
+				
+			</footer>
+			<!-- End footer Area -->	
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>						
+			<script src="js/jquery.nice-select.min.js"></script>							
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
+	</html>
