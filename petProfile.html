@@ -7,6 +7,7 @@
             text-align: center;
         }
     </style>
+
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
@@ -46,10 +47,10 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="index.html">Home</a></li>
-                        <li><a href="cats.html">Adopt Us</a></li>
-                        <li><a href="dogs.html">Add Pet</a></li>
-                        <li><a href="volunteer.html">Pet Helper</a></li>
-                        <li><a href="contact.html">My Profile</a></li>
+                        <li><a href="petsCatalog.html">Adopt Us</a></li>
+                        <li><a href="add-pet.html">Add Pet</a></li>
+                        <li><a href="forum.html">Pet Helper</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
                     </ul>
                 </nav>
                 <!-- #nav-menu-container -->
@@ -67,7 +68,7 @@
                     <h1 class="text-white">
                         Adopt Us
                     </h1>
-                    <p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="cats.html"> Adopt Us</a></p>
+                    <p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="petsCatalog.html"> Adopt Us</a></p>
                 </div>
             </div>
         </div>
@@ -86,7 +87,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <a class="posts-title" href="#">
+                            <a class="posts-title">
                                 <h3>Eddie</h3>
                             </a>
                             <div class="quotes">
@@ -131,15 +132,41 @@
                 <div class="col-lg-4 sidebar-widgets">
                     <div class="widget-wrap">
                         <div class="single-sidebar-widget user-info-widget">
-                            <p class="date col-lg-12 col-md-12 col-6">From: 25 March, 2020 </a>
+                            <p class="date col-lg-12 col-md-12 col-6">Animal: Cat</p>
+                            <p class="date col-lg-12 col-md-12 col-6">Born: 20 December, 2019</p>
+                            <p class="date col-lg-12 col-md-12 col-6">From: 25 March, 2020
                                 <span class="lnr lnr-calendar-full"></span>
                             </p>
+                            <p id="txt" class="date col-lg-12 col-md-12 col-6">The pet is in FAVOURITES</p>
                         </div>
                         <div class="single-sidebar-widget">
-                            <a href="#" class="primary-btn text-uppercase">Add to favourites</a>
+                            <a href="#" id="fav" onclick="Favourute()" class="primary-btn text-uppercase">Add to favourites</a>
                         </div>
+                        <script>
+                            function Favourute() {
+                                var x = document.getElementById("fav");
+                                // var text = 'The pet is in FAVOURITES';
+                                if (x.innerHTML === "Add to favourites") {
+                                    x.innerHTML = "Remove from favourites";
+                                    // document.getElementById("txt").innerHTML += text;
+                                    document.getElementById("txt").hidden = false;
+                                } else {
+                                    x.innerHTML = "Add to favourites";
+                                    document.getElementById("txt").hidden = true;
+                                }
+                            }
+
+                            function Adoption() {
+                                var x = document.getElementById("adopt");
+                                if (x.innerHTML === "Request adoption") {
+                                    x.innerHTML = "Cancel adoption";
+                                } else {
+                                    x.innerHTML = "Request adoption";
+                                }
+                            }
+                        </script>
                         <div class="single-sidebar-widget">
-                            <a href="#" class="primary-btn text-uppercase">Request adoption</a>
+                            <a href="#" id="adopt" onclick="Adoption()" class="primary-btn text-uppercase">Request adoption</a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +174,6 @@
         </div>
     </section>
     <!-- End post-content Area -->
-
 
     <!-- start footer Area -->
     <footer class="footer-area">
