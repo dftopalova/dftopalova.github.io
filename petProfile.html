@@ -137,22 +137,24 @@
                             <p class="date col-lg-12 col-md-12 col-6">From: 25 March, 2020
                                 <span class="lnr lnr-calendar-full"></span>
                             </p>
-                            <p id="txt" class="date col-lg-12 col-md-12 col-6">The pet is in FAVOURITES</p>
+                            <p id="txt" class="date col-lg-12 col-md-12 col-6"><b>The pet is in FAVOURITES</b></p>
+                            <p id="txt2" class="date col-lg-12 col-md-12 col-6"><b>Adoption request has been sent</b></p>
                         </div>
                         <div class="single-sidebar-widget">
                             <a href="#" id="fav" onclick="Favourute()" class="primary-btn text-uppercase">Add to favourites</a>
                         </div>
                         <script>
+                            document.getElementById("txt").style.visibility = 'hidden';
+                            document.getElementById("txt2").style.visibility = 'hidden';
+
                             function Favourute() {
                                 var x = document.getElementById("fav");
-                                // var text = 'The pet is in FAVOURITES';
                                 if (x.innerHTML === "Add to favourites") {
                                     x.innerHTML = "Remove from favourites";
-                                    // document.getElementById("txt").innerHTML += text;
-                                    document.getElementById("txt").hidden = false;
+                                    document.getElementById("txt").style.visibility = 'visible';
                                 } else {
                                     x.innerHTML = "Add to favourites";
-                                    document.getElementById("txt").hidden = true;
+                                    document.getElementById("txt").style.visibility = 'hidden';
                                 }
                             }
 
@@ -160,8 +162,10 @@
                                 var x = document.getElementById("adopt");
                                 if (x.innerHTML === "Request adoption") {
                                     x.innerHTML = "Cancel adoption";
+                                    document.getElementById("txt2").style.visibility = 'visible';
                                 } else {
                                     x.innerHTML = "Request adoption";
+                                    document.getElementById("txt2").style.visibility = 'hidden';
                                 }
                             }
                         </script>
