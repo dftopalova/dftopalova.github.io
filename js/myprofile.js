@@ -4,3 +4,9 @@ function approve(requestDiv) {
     let request = document.getElementById(requestDiv);
     request.remove();
 }
+function reject(requestDiv) {
+    swal("Cancelled", "You have rejected the request!", "error");
+
+    let request = document.getElementById(requestDiv);
+    request.remove();
+}
