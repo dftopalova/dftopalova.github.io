@@ -1,9 +1,8 @@
-function check(){
-    if(document.getElementById('name').value != '' && document.getElementById('email').value != ''  && 
-    	document.getElementById('password').value != '' && document.getElementById('repeatPassword').value != ''){
-    	if(document.getElementById('password').value != document.getElementById('repeatPassword').value){
-    		alert("Двете пароли не съвпадат! Въведи ги отново!");
-    	}
-    	else window.open('loginForm.html');
-    }
+function check() {
+	if (document.getElementById('password').value != document.getElementById('confirmPassword').value) {
+		alert("Passwords do not match! Please try again.");
+	}
+	
+	else window.open('login.html');
 }
+

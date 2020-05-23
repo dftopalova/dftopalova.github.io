@@ -3089,15 +3089,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
 }
 
-.Volunteer-form-area .select-option .nice-select {
+.form-area .select-option .nice-select {
     width: 100% !important;
 }
 
-.Volunteer-form-area .select-option .nice-select .list {
+.form-area .select-option .nice-select .list {
     width: 100% !important;
 }
 
-.Volunteer-form-area label {
+.form-area label {
     color: #222;
     font-weight: 500;
 }
@@ -4107,9 +4107,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: -2.4%;
 }
 
+.form-boundaries {
+    border-style: double;
+    border-radius: 7px;
+    margin-top: 15px;
+}
 
-/*
-################
-               End Blog Details  Page style
-################
-*/
+section {
+    margin-bottom: 30px;
+}
