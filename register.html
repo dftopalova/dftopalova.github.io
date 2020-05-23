@@ -118,9 +118,9 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <form class="col-lg-9">
+                <form class="col-lg-9" method="post">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Name*</label>
                         <input type="text" class="form-control" placeholder="Name" required>
                     </div>
                     <div class="form-row">
@@ -156,15 +156,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email*</label>
                         <input type="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password*</label>
                         <input id="password" type="password" class="form-control mb-20" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <label for="confirm-password">Confirm password</label>
+                        <label for="confirm-password">Confirm password*</label>
                         <input id="confirm-password" type="password" class="form-control mb-20" placeholder="Confirm Password" required>
                     </div>
                     <div class="row py-4">
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div style="text-align:center;">
-                        <button type="button" class="primary-btn" onclick="check()">Register</button><br>
+                        <button type="submit" class="primary-btn" onclick="check()">Register</button><br>
                         <a href="./login.html">Already has a registration?</a>
                     </div>
                 </form>
@@ -264,7 +264,6 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
     <script src="js/register.js"></script>
 </body>
