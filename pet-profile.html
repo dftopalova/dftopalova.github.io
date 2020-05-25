@@ -139,36 +139,11 @@
                             <p id="txt2" class="date col-lg-12 col-md-12 col-6"><b>Adoption request has been sent</b></p>
                         </div>
                         <div class="single-sidebar-widget">
-                            <a href="#" id="fav" onclick="Favourute()" class="primary-btn text-uppercase">Add to favourites</a>
+                            <button id="fav" onclick="Favourute()" class="primary-btn text-uppercase">Add to favourites</button>
                         </div>
-                        <script>
-                            document.getElementById("txt").style.visibility = 'hidden';
-                            document.getElementById("txt2").style.visibility = 'hidden';
 
-                            function Favourute() {
-                                var x = document.getElementById("fav");
-                                if (x.innerHTML === "Add to favourites") {
-                                    x.innerHTML = "Remove from favourites";
-                                    document.getElementById("txt").style.visibility = 'visible';
-                                } else {
-                                    x.innerHTML = "Add to favourites";
-                                    document.getElementById("txt").style.visibility = 'hidden';
-                                }
-                            }
-
-                            function Adoption() {
-                                var x = document.getElementById("adopt");
-                                if (x.innerHTML === "Request adoption") {
-                                    x.innerHTML = "Cancel adoption";
-                                    document.getElementById("txt2").style.visibility = 'visible';
-                                } else {
-                                    x.innerHTML = "Request adoption";
-                                    document.getElementById("txt2").style.visibility = 'hidden';
-                                }
-                            }
-                        </script>
                         <div class="single-sidebar-widget">
-                            <a href="#" id="adopt" onclick="Adoption()" class="primary-btn text-uppercase">Request adoption</a>
+                            <button id="adopt" onclick="Adoption()" class="primary-btn text-uppercase">Request adoption</button>
                         </div>
                     </div>
                 </div>
@@ -247,6 +222,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mail-script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/pet-profile.js"></script>
     <script src="js/main.js"></script>
 </body>
 
