@@ -119,31 +119,31 @@
                         <!-- Start my-pets-list Area -->
                         <section class="cat-list-area section-gap">
                             <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6">
+                                <div class="row" id="my_pets_row">
+                                    <div class="col-lg-3 col-md-6" id="my-pet-1">
                                         <div class="single-cat-list">
                                             <img src="img/dg1.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Spiky</div>
-                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                <button type="button" class="btn btn-danger" onclick="deletePet('my-pet-1', 'my_pets_row')">Delete</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
+                                    <div class="col-lg-3 col-md-6" id="my-pet-2">
                                         <div class="single-cat-list">
                                             <img src="img/ct3.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Timy</div>
-                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                <button type="button" class="btn btn-danger" onclick="deletePet('my-pet-2', 'my_pets_row')">Delete</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
+                                    <div class="col-lg-3 col-md-6" id="my-pet-3">
                                         <div class="single-cat-list">
                                             <img src="img/parrots.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Bonny & Clyde</div>
-                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                <button type="button" class="btn btn-danger" onclick="deletePet('my-pet-3', 'my_pets_row')">Delete</button>
                                             </div>
                                         </div>
                                     </div>
@@ -175,14 +175,14 @@
                         <!-- Start cat-list Area -->
                         <section class="cat-list-area section-gap">
                             <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6">
+                                <div class="row" id="fav_pets_row">
+                                    <div class="col-lg-3 col-md-6" id="fav-pet-1">
                                         <div class="single-cat-list">
                                             <img src="img/ct2.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Eddie</div>
-                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
-                                                <button type="button" class="btn btn-info btn-sm">Request adoption</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="deletePet('fav-pet-1', 'fav_pets_row')">Remove</button>
+                                                <button id="reqBtn1" type="button" class="btn btn-info btn-sm" onclick="requestAdoption('reqBtn1')">Request adoption</button>
                                             </div>
                                             <div>
                                                 <h5>Abyssinian cat</h5>
@@ -190,13 +190,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
+                                    <div class="col-lg-3 col-md-6" id="fav-pet-2">
                                         <div class="single-cat-list">
                                             <img src="img/ct5.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Kate</div>
-                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
-                                                <button type="button" class="btn btn-info btn-sm">Request adoption</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="deletePet('fav-pet-2', 'fav_pets_row')">Remove</button>
+                                                <button id="reqBtn2" type="button" class="btn btn-info btn-sm" onclick="requestAdoption('reqBtn2')">Request adoption</button>
                                             </div>
                                             <div>
                                                 <h5>Balinese cat</h5>
@@ -204,13 +204,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
+                                    <div class="col-lg-3 col-md-6" id="fav-pet-3">
                                         <div class="single-cat-list">
                                             <img src="img/dg7.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Dave</div>
-                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
-                                                <button type="button" class="btn btn-info btn-sm">Request adoption</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="deletePet('fav-pet-3', 'fav_pets_row')">Remove</button>
+                                                <button id="reqBtn3" type="button" class="btn btn-info btn-sm" onclick="requestAdoption('reqBtn3')">Request adoption</button>
                                             </div>
                                             <div>
                                                 <h5>Australian terrier Dog</h5>
@@ -218,13 +218,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
+                                    <div class="col-lg-3 col-md-6" id="fav-pet-4">
                                         <div class="single-cat-list">
-                                            <img src="img/svin.jpg" alt="" class="img-fluid">
+                                            <img src="img/hamster2.jpg" alt="" class="img-fluid">
                                             <div class="overlay">
                                                 <div class="text">Lindsey</div>
-                                                <button type="button" class="btn btn-danger btn-sm">Remove</button>
-                                                <button type="button" class="btn btn-info btn-sm">Request adoption</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="deletePet('fav-pet-4', 'fav_pets_row')">Remove</button>
+                                                <button id="reqBtn4" type="button" class="btn btn-info btn-sm" onclick="requestAdoption('reqBtn4')">Request adoption</button>
                                             </div>
                                             <div>
                                                 <h5>Guinea pig</h5>
