@@ -1,20 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html>
 <head>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="codepixer">
+	<link rel="shortcut icon" href="img/logo1.png">
 	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
+	<meta name="description" content="FMI project for PCHMI">
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Animal Shelter</title>
+	<title>Find a Buddy</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
@@ -86,7 +82,7 @@
             color: white;
         }
         #enterpost{
-        	background-color: #b3f0ff;
+        	background-color: #f7f0b2;
         	visibility: hidden;
         	 z-index: 10;
         	 width:500px;
@@ -212,50 +208,47 @@
 		<div class="container main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a id="thelogo">Find a buddy</a>
-				</div>
-				<nav id="nav-menu-container">
-					<ul class="nav-menu">
-						<li class="menu-active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="cats.html">Animals</a></li>
-						<li><a href="dogs.html">Find pet</a></li>
-						<li><a href="volunteer.html">PetHelper</a></li>
-						<li class="menu-has-children"><a href="">Blog</a></li>
-						<li><a href="contact.html">My Profile</a></li>
-					</ul>
-				</nav><!-- #nav-menu-container -->
+                    <a href="home-page-registered.html">
+                        <img src="img/logo.png" alt="logo" title="" />
+                    </a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="home-page-registered.html">Home</a></li>
+                        <li><a href="pets-catalog.html">Adopt Us</a></li>
+                        <li><a href="add-pet.html">Add Pet</a></li>
+                        <li><a href="forum.html">Pet Helper</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+                    </ul>
+				</nav>
+				<!-- #nav-menu-container -->
 			</div>
 		</div>
 	</header><!-- #header -->
 	<!-- start banner Area-->
 	<section class="banner-area relative" id="home">
-		<div class="container">
-			<div class="overlay overlay-bg"></div>
-			<div class="row fullscreen d-flex align-items-center justify-content-start">
-				<div class="banner-content col-lg-8 col-md-12">
-					<h1 class="text-uppercase">
-						Adopt Us. <br>
-						We need your help.
-					</h1>
-					<p class="text-white sub-head">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-						or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-					</p>
-					<a href="#" class="primary-btn header-btn text-uppercase" onclick="popup()">Find a pet to adopt</a>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        PetHelper
+                    </h1>
+                    <p class="text-white link-nav"><a href="home-page-registered.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="forum.html"> PetHelper</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 	<div id="enterpost">
-		<p>Въведете темата на поста.</p>
+		<p>Title of the post:</p>
 		<input type="text" id="thetitle"></input>
-		<p>Поставете съдържанието на поста.</p>
+		<p>Input content of the post here:</p>
 		<input type="text" id="thecontent"></input>
 		<br>
 		<button onclick="add()">Submit</button>
 	</div>
-	<dir class="filters">
+	<div class="filters">
 
 		<form name="f1" id="f1" action="">
 			<input type="text" class="t1" name="t1" placeholder="&#x1F50D Search"/>
@@ -273,7 +266,7 @@
 		<p onclick="addanimationnews()">News</p>
 		<p onclick="addanimationcomp()">Competitions</p>
 
-	</dir>
+	</div>
 
 	<div class="allPosts">
 		<div class="post" onclick="popupadd()" id="post1">
