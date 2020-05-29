@@ -22,3 +22,7 @@ function Adoption() {
         document.getElementById("txt2").style.visibility = 'visible';
     }
 }
+
+function sendSucc() {
+    swal("", "The message was sent to the owner!", "success");
+}

@@ -1,963 +1,1008 @@
 ﻿<!DOCTYPE html>
 <html lang="zxx" class="no-js">
-<head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="codepixer">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Animal Shelter</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-	<!--
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo1.png">
+    <!-- Meta Description -->
+    <meta name="description" content="FMI project for PCHMI">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Find a Buddy</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
 	CSS
 	============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/main.css">
-	<style>
-		.allPosts {
-			border-style: solid;
-			border-color: black;
-			width: 830px;
-			height: 990px;
-			left: 300px;
-			text-align: left;
-			float: left;
-			z-index: -1;
-		}
-
-		.post {
-			margin-top: 20px;
-			margin-left: 20px;
-			background-color: darkseagreen;
-			height: 98px;
-			width: 248px;
-			border: 3px solid rgba(17,17,17,0.1);
-			display: inline-block;
-			float: left;
-			position:relative;
-		}
-
-		.filters {
-			float: left;
-			width: 300px;
-			text-align: center;
-		}
-
-		.addPost {
-			font-size: 100px;
-			display: inline-block;
-			margin-top: 40px;
-			margin-left: 90px;
-			z-index: -1;
-		}
-		.search
-		{
-			width:230px;
-			height:30px;
-			margin-left:5px;
-			margin-top:30px;
-			border: 3px solid;
-		}
-        .numberComents
-		{
-			position:absolute;
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .allPosts {
+            border-style: solid;
+            border-color: black;
+            width: 830px;
+            height: 990px;
+            left: 300px;
+            text-align: left;
+            float: left;
+            z-index: -1;
+        }
+        
+        .post {
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: darkseagreen;
+            height: 98px;
+            width: 248px;
+            border: 3px solid rgba(17, 17, 17, 0.1);
+            display: inline-block;
+            float: left;
+            position: relative;
+        }
+        
+        .filters {
+            float: left;
+            width: 300px;
+            text-align: center;
+        }
+        
+        .addPost {
+            font-size: 100px;
+            display: inline-block;
+            margin-top: 40px;
+            margin-left: 90px;
+            z-index: -1;
+        }
+        
+        .search {
+            width: 230px;
+            height: 30px;
+            margin-left: 5px;
+            margin-top: 30px;
+            border: 3px solid;
+        }
+        
+        .numberComents {
+            position: absolute;
             bottom: 0;
         }
-        .footer-area
-		{
-			float:left;
-			width:1550px;
+        
+        .footer-area {
+            float: left;
+            width: 1550px;
         }
+        
         #thelogo {
             color: white;
         }
-        #enterpost{
-        	background-color: #b3f0ff;
-        	visibility: hidden;
-        	 z-index: 10;
-        	 width:500px;
-        	 height:500px;
-        	 border:5px solid black;
-        	 margin-left:600px;
-        	 margin-top:100px;
-        	 position:absolute;
+        
+        #enterpost {
+            background-color: #b3f0ff;
+            visibility: hidden;
+            z-index: 10;
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            margin-left: 600px;
+            margin-top: 100px;
+            position: absolute;
         }
-                .textpost{
-        	background-color: #b3f0ff;
-        	visibility: hidden;
-        	 z-index: 11;
-        	 width:500px;
-        	 height:500px;
-        	 border:5px solid black;
-        	 margin-left:300px;
-        	 margin-top:100px;
-        	 position:absolute;
+        
+        .textpost {
+            background-color: #b3f0ff;
+            visibility: hidden;
+            z-index: 11;
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            margin-left: 300px;
+            margin-top: 100px;
+            position: absolute;
         }
-        #banner-area relative
-        {
-        	z-index: -1;
+        
+        #banner-area relative {
+            z-index: -1;
         }
-        #inv1
-        {
-        	visibility: hidden;
+        
+        #inv1 {
+            visibility: hidden;
         }
-        #inv2
-        {
-        	visibility: hidden;
+        
+        #inv2 {
+            visibility: hidden;
         }
-                #inv1
-        {
-        	visibility: hidden;
+        
+        #inv1 {
+            visibility: hidden;
         }
-        #inv3
-        {
-        	visibility: hidden;
+        
+        #inv3 {
+            visibility: hidden;
         }
-                #inv4
-        {
-        	visibility: hidden;
+        
+        #inv4 {
+            visibility: hidden;
         }
-        #inv5
-        {
-        	visibility: hidden;
+        
+        #inv5 {
+            visibility: hidden;
         }
-                #inv6
-        {
-        	visibility: hidden;
+        
+        #inv6 {
+            visibility: hidden;
         }
-        #inv7
-        {
-        	visibility: hidden;
+        
+        #inv7 {
+            visibility: hidden;
         }
-                #inv8
-        {
-        	visibility: hidden;
+        
+        #inv8 {
+            visibility: hidden;
         }
-        #inv9
-        {
-        	visibility: hidden;
+        
+        #inv9 {
+            visibility: hidden;
         }
-                #inv10
-        {
-        	visibility: hidden;
+        
+        #inv10 {
+            visibility: hidden;
         }
-                #inv11
-        {
-        	visibility: hidden;
+        
+        #inv11 {
+            visibility: hidden;
         }
-        #inv12
-        {
-        	visibility: hidden;
+        
+        #inv12 {
+            visibility: hidden;
         }
-        #thetitle
-        {
-        	width:400px;
+        
+        #thetitle {
+            width: 400px;
         }
-        #thecontent
-        {
-        	width:400px;
-        	height:300px;
+        
+        #thecontent {
+            width: 400px;
+            height: 300px;
         }
+        
         @keyframes example {
-  			0%   {margin-top: 300px; left:570px;}
-  			100% {margin-top: 130px; left:305px;}
-  		}
-  	    @keyframes example1 {
-  			0%   {margin-top: 300px;}
-  			100% {margin-top: 130px;}
-  		}
-  		 @keyframes example2 {
-  			0%   {margin-top: 130px;}
-  			100% {margin-top: 30px; }
-  		 }
-  		 @keyframes example3 {
-  			0%   {margin-top: 130px;left:305px;}
-  			100% {margin-top: 30px;left:570px;}
-  		 }
-  		  @keyframes example4 {
-  			0%   {margin-top: 420px;left:305px;}
-  			100% {margin-top: 130px;left:570px;}
-  		 }
-
-		@keyframes example5 {
-  			0%   {margin-top: 300px;}
-  			100% {margin-top: 130px; }
-  		 }
-		  @keyframes example6 {
-  			0%   {margin-top: 300px;}
-  			100% {margin-top: 130px; }
-  		 }
-  		 @keyframes example7 {
-  			0%   {margin-top: 420px;left:305px;}
-  			100% {margin-top: 20px; left:840px;}
-  		 }
-  		 .close
-  		 {
-  		  margin-left:465px;
-  		  background-color: red;
-  		 }
-	</style>
-</head>
-<body>
-<header id="header" id="home">
-	<div class="container main-menu">
-		<div class="row align-items-center justify-content-between d-flex">
-			<div id="logo">
-				<a id="thelogo">Find a buddy</a>
-			</div>
-			<nav id="nav-menu-container">
-				<ul class="nav-menu">
-					<li class="menu-active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="cats.html">Animals</a></li>
-					<li><a href="dogs.html">Find pet</a></li>
-					<li><a href="volunteer.html">PetHelper</a></li>
-					<li class="menu-has-children"><a href="">Blog</a></li>
-					<li><a href="contact.html">My Profile</a></li>
-				</ul>
-			</nav><!-- #nav-menu-container -->
-		</div>
-	</div>
-</header><!-- #header -->
-<!-- start banner Area-->
-<section class="banner-area relative" id="home">
-	<div class="container">
-		<div class="overlay overlay-bg"></div>
-		<div class="row fullscreen d-flex align-items-center justify-content-start">
-			<div class="banner-content col-lg-8 col-md-12">
-				<h1 class="text-uppercase">
-					Adopt Us. <br>
-					We need your help.
-				</h1>
-				<p class="text-white sub-head">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-					or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-				</p>
-				<a href="#" class="primary-btn header-btn text-uppercase" onclick="popup()">Find a pet to adopt</a>
-			</div>
-		</div>
-	</div>
-</section>
-<div id="enterpost">
-	<button class="close" onclick="hideall()">X</button>
-	<p>Въведете темата на поста.</p>
-	<input type="text" id="thetitle"></input>
-	<p>Поставете съдържанието на поста.</p>
-	<input type="text" id="thecontent"></input>
-	<br>
-	<button onclick="add()">Submit</button>
-</div>
-<dir class="filters">
-
-	<form name="f1" id="f1" action="">
-		<input type="text" class="t1" name="t1" placeholder="&#x1F50D Search"/>
-		<input type="submit" name="b1" value="Find" style="display: none;"/>
-	</form>
-	<br />
-	<br />
-	<h1>Filters</h1><br><br>
-	<h3>By date:</h3><br>
-	<p onclick="addanimationtoday()">From today</p>
-	<p onclick="addanimationweek()">From the last week</p>
-	<p>From the last month</p>
-	<h3 >By topic:</h3><br>
-	<p onclick="addanimationadv()">Advises</p>
-	<p onclick="addanimationnews()">News</p>
-	<p onclick="addanimationcomp()">Competitions</p>
-
-</dir>
-
-<div class="allPosts">
-	<div class="post" onclick="popupadd()" id="post1">
-		<a class="addPost" onclick="popupadd()">&#x2b</a>
-		<a  onclick="popupadd()">Add post</a>
-	</div>
-	<div class="post" onclick="popup('1')" id="post2">
-
-		<p onclick="popup('1')">Съвет за отглеждане на немска овчарка.</p>
-		<div class="numberComents">
-			<a onclick="popup('1')">&#128488 106</a>
-			<a onclick="popup('1')">Иван Иванов</a>
-		</div>
-
-	</div>
-	<div class="textpost" id="tpost1" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option1!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="textpost" id="tpost2" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option2!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post3" onclick="popup('2')">
-
-		<p>Най добра храна за сиямска котка.</p>
-		<div class="numberComents">
-			<a>&#128488 12</a>
-			<a>Иванка Иванова</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost3" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option3!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post12" onclick="popup('3')">
-
-		<p>Има ли корона вирус по домашните любимци.</p>
-		<div class="numberComents">
-			<a>&#128488 2</a>
-			<a>Георги Георгиев</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost4" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post4" onclick="popup('4')">
-
-		<p>Победителката в състезанието за породисти кучета.</p>
-		<div class="numberComents">
-			<a>&#128488 89</a>
-			<a>Петър Петров</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost5" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post5" onclick="popup('5')">
-
-		<p>Зоополиция България.</p>
-		<div class="numberComents">
-			<a>&#128488 36</a>
-			<a>Петарарка Петрова</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost6" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post6" onclick="popup('6')">
-		<p>Търсят се доброволци в приюта за животни в село Спанчевци.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost7" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post7" onclick="popup('7')">
-		<p>Как да си обезпаразитим кучето.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost8" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post11" onclick="popup('8')">
-		<p>Търсят се доброволци в приюта за животни в село Горно Илиново.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost9" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post10" onclick="popup('9')">
-		<p>Търсят се доброволци в приюта за животни в село Крушево.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost10" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post8" onclick="popup('10')">
-		<p>Съвети за направа на клетка на папагал.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost11" >
-		<button class="close" onclick="hideall()">X</button>
-		<p>Make adoption your only option!<br>  This is the message we want to send to our users.
-			We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-			So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
-	</div>
-	<div class="post" id="post9" onclick="popup('11')">
-		<p>Най добра храна за домашен тигров питон.</p>
-		<div class="numberComents">
-			<a>&#128488 121</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost12" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle1"></h1>
-		<p id="tposttext1"></p>
-	</div>
-	<div class="post" id="inv1"onclick="popup('12')">
-		<p id="titleadd1"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost13" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle2"></h1>
-		<p id="tposttext2"></p>
-	</div>
-	<div class="post" id="inv2" onclick="popup('13')">
-		<p id="titleadd2"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost14" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle3"></h1>
-		<p id="tposttext3"></p>
-	</div>
-	<div class="post" id="inv3" onclick="popup('14')">
-		<p id="titleadd3"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost15" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle4"></h1>
-		<p id="tposttext4"></p>
-	</div>
-	<div class="post" id="inv4" onclick="popup('15')">
-		<p id="titleadd4"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost16" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle5"></h1>
-		<p id="tposttext5"></p>
-	</div>
-	<div class="post" id="inv5" onclick="popup('16')">
-		<p id="titleadd5"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost17" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle6"></h1>
-		<p id="tposttext6"></p>
-	</div>
-	<div class="post" id="inv6" onclick="popup('17')">
-		<p id="titleadd6"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost18" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle7"></h1>
-		<p id="tposttext7"></p>
-	</div>
-	<div class="post" id="inv7" onclick="popup('18')">
-		<p id="titleadd7"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost19" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle8"></h1>
-		<p id="tposttext8"></p>
-	</div>
-	<div class="post" id="inv8" onclick="popup('19')">
-		<p id="titleadd8"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost20" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle9"></h1>
-		<p id="tposttext9"></p>
-	</div>
-	<div class="post" id="inv9" onclick="popup('20')">
-		<p id="titleadd9"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost21" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle10"></h1>
-		<p id="tposttext10"></p>
-	</div>
-	<div class="post" id="inv10" onclick="popup('21')">
-		<p id="titleadd10"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost22" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle11"></h1>
-		<p id="tposttext11"></p>
-	</div>
-	<div class="post" id="inv11" onclick="popup('22')">
-		<p id="titleadd11"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost23" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle12"></h1>
-		<p id="tposttext12"></p>
-	</div>
-	<div class="post" id="inv12" onclick="popup('23')">
-		<p id="titleadd12"></p>
-		<div class="numberComents">
-			<a>&#128488 0</a>
-			<a>Георгина Георгиева</a>
-		</div>
-	</div>
-	<div class="textpost" id="tpost24" >
-		<button class="close" onclick="hideall()">X</button>
-		<h1 id="tposttitle13"></h1>
-		<p id="tposttext13"></p>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-<footer class="footer-area">
-	<div class="container">
-		<div class="row pt-120 pb-80">
-			<div class="col-lg-4 col-md-6">
-				<div class="single-footer-widget">
-					<h6>About Us</h6>
-					<p>
-						Make adoption your only option!<br>  This is the message we want to send to our users.
-						We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day.
-						So we decided to do something about it by making the process of adopting and giving a pet for adoption a much easier one.
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-4  col-md-6">
-				<div class="single-footer-widget mail-chimp">
-					<h6 class="mb-20">Contact Us</h6>
-					<ul class="list-contact">
-						<li class="flex-row d-flex">
-							<div class="icon">
-								<span class="lnr lnr-home"></span>
-							</div>
-							<div class="detail">
-								<h4>Sofia, Bulgaria</h4>
-								<p>
-									bul. „James Boucher“ 5, 1164 Lozenets
-								</p>
-							</div>
-						</li>
-						<li class="flex-row d-flex">
-							<div class="icon">
-								<span class="lnr lnr-phone-handset"></span>
-							</div>
-							<div class="detail">
-								<h4>02 816 1542</h4>
-								<p>
-									Mon to Fri 9am to 6 pm
-								</p>
-							</div>
-						</li>
-						<li class="flex-row d-flex">
-							<div class="icon">
-								<span class="lnr lnr-envelope"></span>
-							</div>
-							<div class="detail">
-								<h4>pchmi@fmi-uni.bg</h4>
-								<p>
-									Send us your query anytime!
-								</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-</footer>
-<!-- End footer Area-->
-
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-<script src="js/easing.min.js"></script>
-<script src="js/hoverIntent.js"></script>
-<script src="js/superfish.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/main.js"></script>
-<script>
-	function addanimationweek()
-	{
-		backtonormal()
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("post2").style.visibility='hidden';
-		document.getElementById("post3").style.visibility='hidden';
-		document.getElementById("post4").style.visibility='hidden';
-		document.getElementById("post6").style.visibility='hidden';
-		document.getElementById("post7").style.visibility='hidden';
-		document.getElementById("post8").style.visibility='hidden';
-		document.getElementById("post9").style.visibility='hidden';
-		document.getElementById("post10").style.visibility='hidden';
-		document.getElementById("post11").style.visibility='hidden';
-
-		document.getElementById("post12").style.animation="example3 0.5s";
-		document.getElementById("post12").style.position="absolute";
-		document.getElementById("post12").style.left = "570px";
-		document.getElementById("post12").style.marginTop="20px";
-
-		document.getElementById("post5").style.animation="example3 0.5s";
-		document.getElementById("post5").style.position="absolute";
-		document.getElementById("post5").style.left = "840px";
-		document.getElementById("post5").style.marginTop="20px";
-
-		var i;
-		var level = 130;
-		var topp = "130px";
-		var leftt = "305px";
-		for (i = 1; i < added; i++) {
-		var theid = "inv";
-		var finid = theid.concat(i);
-		document.getElementById(finid).style.animation="example7 0.5s";
-		document.getElementById(finid).style.position="absolute";
-		document.getElementById(finid).style.left = leftt;
-		document.getElementById(finid).style.marginTop=topp;
-		if(leftt == "840px"){leftt = "305px"; level +=110; topp = level + "px";}
-		else if(leftt == "305px"){leftt = "570px";}
-		else if(leftt == "570px"){leftt = "840px";}
-       }
-	}
-	function backtonormal()
-	{
-		document.getElementById("post2").style.visibility='visible';
-		document.getElementById("post3").style.visibility='visible';
-		document.getElementById("post4").style.visibility='visible';
-		document.getElementById("post5").style.visibility='visible';
-		document.getElementById("post6").style.visibility='visible';
-		document.getElementById("post7").style.visibility='visible';
-		document.getElementById("post8").style.visibility='visible';
-		document.getElementById("post9").style.visibility='visible';
-		document.getElementById("post10").style.visibility='visible';
-		document.getElementById("post11").style.visibility='visible';
-		document.getElementById("post12").style.visibility='visible';
-
-	}
-	function popupadd()
-	{
-	hideall();
-		document.getElementById("enterpost").style.visibility='visible';
-	}
-	function popup(a)
-	{
-		hideall();
-		var theid = "tpost";
-		var finid = theid + a;
-			document.getElementById(finid).style.visibility='visible';
-	}
-	function hideall()
-	{
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("tpost1").style.visibility='hidden';
-		document.getElementById("tpost2").style.visibility='hidden';
-		document.getElementById("tpost3").style.visibility='hidden';
-		document.getElementById("tpost4").style.visibility='hidden';
-		document.getElementById("tpost5").style.visibility='hidden';
-		document.getElementById("tpost6").style.visibility='hidden';
-		document.getElementById("tpost7").style.visibility='hidden';
-		document.getElementById("tpost8").style.visibility='hidden';
-		document.getElementById("tpost9").style.visibility='hidden';
-		document.getElementById("tpost10").style.visibility='hidden';
-		document.getElementById("tpost11").style.visibility='hidden';
-		document.getElementById("tpost12").style.visibility='hidden';
-		document.getElementById("tpost13").style.visibility='hidden';
-		document.getElementById("tpost14").style.visibility='hidden';
-		document.getElementById("tpost15").style.visibility='hidden';
-		document.getElementById("tpost16").style.visibility='hidden';
-		document.getElementById("tpost17").style.visibility='hidden';
-		document.getElementById("tpost18").style.visibility='hidden';
-		document.getElementById("tpost19").style.visibility='hidden';
-		document.getElementById("tpost20").style.visibility='hidden';
-		document.getElementById("tpost21").style.visibility='hidden';
-		document.getElementById("tpost22").style.visibility='hidden';
-		document.getElementById("tpost23").style.visibility='hidden';
-		document.getElementById("tpost24").style.visibility='hidden';
-	}
-
-	function addanimationtoday()
-{
-backtonormal()
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("post2").style.visibility='hidden';
-		document.getElementById("post3").style.visibility='hidden';
-		document.getElementById("post4").style.visibility='hidden';
-		document.getElementById("post5").style.visibility='hidden';
-		document.getElementById("post6").style.visibility='hidden';
-		document.getElementById("post7").style.visibility='hidden';
-		document.getElementById("post8").style.visibility='hidden';
-		document.getElementById("post9").style.visibility='hidden';
-		document.getElementById("post10").style.visibility='hidden';
-		document.getElementById("post11").style.visibility='hidden';
-
-		document.getElementById("post12").style.animation="example3 0.5s";
-		document.getElementById("post12").style.position="absolute";
-		document.getElementById("post12").style.left = "570px";
-		document.getElementById("post12").style.marginTop="20px";
-
-		var i;
-		var level = 20;
-		var topp = "20px";
-		var leftt = "840px";
-		for (i = 1; i < added; i++) {
-		var theid = "inv";
-		var finid = theid.concat(i);
-		document.getElementById(finid).style.animation="example7 0.5s";
-		document.getElementById(finid).style.position="absolute";
-		document.getElementById(finid).style.left = leftt;
-		document.getElementById(finid).style.marginTop=topp;
-		if(leftt == "840px"){leftt = "305px"; level +=110; topp = level + "px";}
-		else if(leftt == "305px"){leftt = "570px";}
-		else if(leftt == "570px"){leftt = "840px";}
-       }
-}
-
-
-
-function addanimationcomp()
-{
-backtonormal()
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("post2").style.visibility='hidden';
-		document.getElementById("post3").style.visibility='hidden';
-		document.getElementById("post5").style.visibility='hidden';
-		document.getElementById("post6").style.visibility='hidden';
-		document.getElementById("post7").style.visibility='hidden';
-		document.getElementById("post8").style.visibility='hidden';
-		document.getElementById("post9").style.visibility='hidden';
-		document.getElementById("post10").style.visibility='hidden';
-		document.getElementById("post11").style.visibility='hidden';
-		document.getElementById("post12").style.visibility='hidden';
-
-		document.getElementById("post4").style.animation="example2 0.5s";
-				document.getElementById("post4").style.position="absolute";
-		document.getElementById("post4").style.left = "570px";
-		document.getElementById("post4").style.marginTop="20px";
-}
-function addanimationnews()
-{
-backtonormal()
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("post3").style.visibility='hidden';
-		document.getElementById("post2").style.visibility='hidden';
-		document.getElementById("post4").style.visibility='hidden';
-		document.getElementById("post7").style.visibility='hidden';
-		document.getElementById("post9").style.visibility='hidden';
-		document.getElementById("post8").style.visibility='hidden';
-
-
-		document.getElementById("post12").style.animation="example3 0.5s";
-		document.getElementById("post12").style.position="absolute";
-		document.getElementById("post12").style.left = "570px";
-		document.getElementById("post12").style.marginTop="20px";
-
-
-		document.getElementById("post5").style.animation="example2 0.5s";
-		document.getElementById("post5").style.position="absolute";
-		document.getElementById("post5").style.left = "840px";
-		document.getElementById("post5").style.marginTop="20px";
-
-
-		document.getElementById("post6").style.animation="example6 0.5s";
-		document.getElementById("post6").style.position="absolute";
-		document.getElementById("post6").style.left = "305px";
-		document.getElementById("post6").style.marginTop="130px";
-
-
-		document.getElementById("post10").style.animation="example4 0.5s";
-		document.getElementById("post10").style.position="absolute";
-		document.getElementById("post10").style.left = "570px";
-		document.getElementById("post10").style.marginTop="130px";
-
-
-		document.getElementById("post11").style.animation="example5 0.5s";
-		document.getElementById("post11").style.position="absolute";
-		document.getElementById("post11").style.left = "840px";
-		document.getElementById("post11").style.marginTop="130px";
-}
-var added = 1;
-function addanimationadv()
-{
-backtonormal()
-		document.getElementById("enterpost").style.visibility='hidden';
-		document.getElementById("post4").style.visibility='hidden';
-		document.getElementById("post5").style.visibility='hidden';
-		document.getElementById("post6").style.visibility='hidden';
-		document.getElementById("post10").style.visibility='hidden';
-		document.getElementById("post11").style.visibility='hidden';
-		document.getElementById("post12").style.visibility='hidden';
-		document.getElementById("post7").style.position="absolute";
-		document.getElementById("post7").style.animation="example 0.5s";
-		document.getElementById("post7").style.left = "305px";
-		document.getElementById("post7").style.marginTop="130px";
-
-		document.getElementById("post8").style.position="absolute";
-		document.getElementById("post8").style.marginTop="130px";
-		document.getElementById("post8").style.left = "570px";
-		document.getElementById("post8").style.animation="example1 0.5s";
-
-		document.getElementById("post9").style.position="absolute";
-		document.getElementById("post9").style.marginTop="130px";
-		document.getElementById("post9").style.left = "840px";
-		document.getElementById("post9").style.animation="example1 0.5s";
-
-		var i;
-		for (i = 1; i < 13; i++) {
-		var theid = "inv";
-		var finid = theid.concat(i);
-  		document.getElementById(finid).style.visibility='hidden';
-		}
-}
-function add()
-{
-	var theid = "inv";
-	var finid = theid.concat(added);
-	document.getElementById(finid).style.visibility='visible';
-	 theid = "titleadd";
-	 finid = theid.concat(added);
-	 var titleid = "tposttitle" + added;
-	 var textid = "tposttext" + added;
-	var posttitle = document.getElementById("thetitle").value;
-	var posttext = document.getElementById("thecontent").value;
-   	 document.getElementById("thetitle").value='';
-   	 document.getElementById("thecontent").value='';
-	document.getElementById("enterpost").style.visibility='hidden';
-	document.getElementById(finid).innerHTML = posttitle;
-	document.getElementById(titleid).innerHTML = posttitle;
-	document.getElementById(textid).innerHTML = posttext;
-   added++;
-
-}
-
-var TRange = null;
-
-function findString(str) {
-  if (str == "news") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
-}
-  if (str == "News") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
-}
-  if (str == "NEWS") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
-}
-  if (str == "home") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
-}
-if (str == "Home") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
-}
-if (str == "HOME") {
-    location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
-}
-
-
-    if (window.find) {
-            strFound = self.find(str)
-        if (!strFound) {
-            strFound = self.find(str, 0, 1)
-            while (self.find(str, 0, 1)) continue
+            0% {
+                margin-top: 300px;
+                left: 570px;
+            }
+            100% {
+                margin-top: 130px;
+                left: 305px;
+            }
         }
-    }
-    if (!strFound) alert("String '" + str + "' not found!")
-        return;
-};
+        
+        @keyframes example1 {
+            0% {
+                margin-top: 300px;
+            }
+            100% {
+                margin-top: 130px;
+            }
+        }
+        
+        @keyframes example2 {
+            0% {
+                margin-top: 130px;
+            }
+            100% {
+                margin-top: 30px;
+            }
+        }
+        
+        @keyframes example3 {
+            0% {
+                margin-top: 130px;
+                left: 305px;
+            }
+            100% {
+                margin-top: 30px;
+                left: 570px;
+            }
+        }
+        
+        @keyframes example4 {
+            0% {
+                margin-top: 420px;
+                left: 305px;
+            }
+            100% {
+                margin-top: 130px;
+                left: 570px;
+            }
+        }
+        
+        @keyframes example5 {
+            0% {
+                margin-top: 300px;
+            }
+            100% {
+                margin-top: 130px;
+            }
+        }
+        
+        @keyframes example6 {
+            0% {
+                margin-top: 300px;
+            }
+            100% {
+                margin-top: 130px;
+            }
+        }
+        
+        @keyframes example7 {
+            0% {
+                margin-top: 420px;
+                left: 305px;
+            }
+            100% {
+                margin-top: 20px;
+                left: 840px;
+            }
+        }
+        
+        .close {
+            margin-left: 465px;
+            background-color: red;
+        }
+    </style>
+</head>
 
-document.getElementById('f1').onsubmit = function() {
-    findString(this.t1.value);
-    return false;
-};
-</script>
+<body>
+    <header id="header" id="home">
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="home-page-registered.html">
+                        <img src="img/logo.png" alt="logo" title="" />
+                    </a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="home-page-registered.html">Home</a></li>
+                        <li><a href="pets-catalog.html">Adopt Us</a></li>
+                        <li><a href="add-pet.html">Add Pet</a></li>
+                        <li><a href="forum.html">Pet Helper</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+                    </ul>
+                </nav>
+                <!-- #nav-menu-container -->
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+    <!-- start banner Area-->
+    <section class="banner-area relative" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Pet Helper
+                    </h1>
+                    <p class="text-white link-nav"><a href="home-page-registered.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="forum.html">Pet Helper</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="enterpost">
+        <button class="close" onclick="hideall()">X</button>
+        <p>Въведете темата на поста.</p>
+        <input type="text" id="thetitle"></input>
+        <p>Поставете съдържанието на поста.</p>
+        <input type="text" id="thecontent"></input>
+        <br>
+        <button onclick="add()">Submit</button>
+    </div>
+    <dir class="filters">
+
+        <form name="f1" id="f1" action="">
+            <input type="text" class="t1" name="t1" placeholder="&#x1F50D Search" />
+            <input type="submit" name="b1" value="Find" style="display: none;" />
+        </form>
+        <br />
+        <br />
+        <h1>Filters</h1><br><br>
+        <h3>By date:</h3><br>
+        <p onclick="addanimationtoday()">From today</p>
+        <p onclick="addanimationweek()">From the last week</p>
+        <p>From the last month</p>
+        <h3>By topic:</h3><br>
+        <p onclick="addanimationadv()">Advises</p>
+        <p onclick="addanimationnews()">News</p>
+        <p onclick="addanimationcomp()">Competitions</p>
+
+    </dir>
+
+    <div class="allPosts">
+        <div class="post" onclick="popupadd()" id="post1">
+            <a class="addPost" onclick="popupadd()">&#x2b</a>
+            <a onclick="popupadd()">Add post</a>
+        </div>
+        <div class="post" onclick="popup('1')" id="post2">
+
+            <p onclick="popup('1')">Съвет за отглеждане на немска овчарка.</p>
+            <div class="numberComents">
+                <a onclick="popup('1')">&#128488 106</a>
+                <a onclick="popup('1')">Иван Иванов</a>
+            </div>
+
+        </div>
+        <div class="textpost" id="tpost1">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option1!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="textpost" id="tpost2">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option2!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post3" onclick="popup('2')">
+
+            <p>Най добра храна за сиямска котка.</p>
+            <div class="numberComents">
+                <a>&#128488 12</a>
+                <a>Иванка Иванова</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost3">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option3!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post12" onclick="popup('3')">
+
+            <p>Има ли корона вирус по домашните любимци.</p>
+            <div class="numberComents">
+                <a>&#128488 2</a>
+                <a>Георги Георгиев</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost4">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post4" onclick="popup('4')">
+
+            <p>Победителката в състезанието за породисти кучета.</p>
+            <div class="numberComents">
+                <a>&#128488 89</a>
+                <a>Петър Петров</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost5">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post5" onclick="popup('5')">
+
+            <p>Зоополиция България.</p>
+            <div class="numberComents">
+                <a>&#128488 36</a>
+                <a>Петарарка Петрова</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost6">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post6" onclick="popup('6')">
+            <p>Търсят се доброволци в приюта за животни в село Спанчевци.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost7">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post7" onclick="popup('7')">
+            <p>Как да си обезпаразитим кучето.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost8">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post11" onclick="popup('8')">
+            <p>Търсят се доброволци в приюта за животни в село Горно Илиново.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost9">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post10" onclick="popup('9')">
+            <p>Търсят се доброволци в приюта за животни в село Крушево.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost10">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post8" onclick="popup('10')">
+            <p>Съвети за направа на клетка на папагал.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost11">
+            <button class="close" onclick="hideall()">X</button>
+            <p>Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided to do something
+                about it by making the process of adopting and giving a pet for adoption a much easier one.</p>
+        </div>
+        <div class="post" id="post9" onclick="popup('11')">
+            <p>Най добра храна за домашен тигров питон.</p>
+            <div class="numberComents">
+                <a>&#128488 121</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost12">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle1"></h1>
+            <p id="tposttext1"></p>
+        </div>
+        <div class="post" id="inv1" onclick="popup('12')">
+            <p id="titleadd1"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost13">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle2"></h1>
+            <p id="tposttext2"></p>
+        </div>
+        <div class="post" id="inv2" onclick="popup('13')">
+            <p id="titleadd2"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost14">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle3"></h1>
+            <p id="tposttext3"></p>
+        </div>
+        <div class="post" id="inv3" onclick="popup('14')">
+            <p id="titleadd3"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost15">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle4"></h1>
+            <p id="tposttext4"></p>
+        </div>
+        <div class="post" id="inv4" onclick="popup('15')">
+            <p id="titleadd4"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost16">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle5"></h1>
+            <p id="tposttext5"></p>
+        </div>
+        <div class="post" id="inv5" onclick="popup('16')">
+            <p id="titleadd5"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost17">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle6"></h1>
+            <p id="tposttext6"></p>
+        </div>
+        <div class="post" id="inv6" onclick="popup('17')">
+            <p id="titleadd6"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost18">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle7"></h1>
+            <p id="tposttext7"></p>
+        </div>
+        <div class="post" id="inv7" onclick="popup('18')">
+            <p id="titleadd7"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost19">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle8"></h1>
+            <p id="tposttext8"></p>
+        </div>
+        <div class="post" id="inv8" onclick="popup('19')">
+            <p id="titleadd8"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost20">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle9"></h1>
+            <p id="tposttext9"></p>
+        </div>
+        <div class="post" id="inv9" onclick="popup('20')">
+            <p id="titleadd9"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost21">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle10"></h1>
+            <p id="tposttext10"></p>
+        </div>
+        <div class="post" id="inv10" onclick="popup('21')">
+            <p id="titleadd10"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost22">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle11"></h1>
+            <p id="tposttext11"></p>
+        </div>
+        <div class="post" id="inv11" onclick="popup('22')">
+            <p id="titleadd11"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost23">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle12"></h1>
+            <p id="tposttext12"></p>
+        </div>
+        <div class="post" id="inv12" onclick="popup('23')">
+            <p id="titleadd12"></p>
+            <div class="numberComents">
+                <a>&#128488 0</a>
+                <a>Георгина Георгиева</a>
+            </div>
+        </div>
+        <div class="textpost" id="tpost24">
+            <button class="close" onclick="hideall()">X</button>
+            <h1 id="tposttitle13"></h1>
+            <p id="tposttext13"></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row pt-120 pb-80">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-footer-widget">
+                        <h6>About Us</h6>
+                        <p>
+                            Make adoption your only option!<br> This is the message we want to send to our users. We are students at the Sofia University and we are deeply bothered by the amount of animals being left on the streets each day. So we decided
+                            to do something about it by making the process of adopting and giving a pet for adoption a much easier one.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Contact Us</h6>
+                        <ul class="list-contact">
+                            <li class="flex-row d-flex">
+                                <div class="icon">
+                                    <span class="lnr lnr-home"></span>
+                                </div>
+                                <div class="detail">
+                                    <h4>Sofia, Bulgaria</h4>
+                                    <p>
+                                        bul. „James Boucher“ 5, 1164 Lozenets
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex-row d-flex">
+                                <div class="icon">
+                                    <span class="lnr lnr-phone-handset"></span>
+                                </div>
+                                <div class="detail">
+                                    <h4>02 816 1542</h4>
+                                    <p>
+                                        Mon to Fri 9am to 6 pm
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex-row d-flex">
+                                <div class="icon">
+                                    <span class="lnr lnr-envelope"></span>
+                                </div>
+                                <div class="detail">
+                                    <h4>pchmi@fmi-uni.bg</h4>
+                                    <p>
+                                        Send us your query anytime!
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End footer Area-->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function addanimationweek() {
+            backtonormal()
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("post2").style.visibility = 'hidden';
+            document.getElementById("post3").style.visibility = 'hidden';
+            document.getElementById("post4").style.visibility = 'hidden';
+            document.getElementById("post6").style.visibility = 'hidden';
+            document.getElementById("post7").style.visibility = 'hidden';
+            document.getElementById("post8").style.visibility = 'hidden';
+            document.getElementById("post9").style.visibility = 'hidden';
+            document.getElementById("post10").style.visibility = 'hidden';
+            document.getElementById("post11").style.visibility = 'hidden';
+
+            document.getElementById("post12").style.animation = "example3 0.5s";
+            document.getElementById("post12").style.position = "absolute";
+            document.getElementById("post12").style.left = "570px";
+            document.getElementById("post12").style.marginTop = "20px";
+
+            document.getElementById("post5").style.animation = "example3 0.5s";
+            document.getElementById("post5").style.position = "absolute";
+            document.getElementById("post5").style.left = "840px";
+            document.getElementById("post5").style.marginTop = "20px";
+
+            var i;
+            var level = 130;
+            var topp = "130px";
+            var leftt = "305px";
+            for (i = 1; i < added; i++) {
+                var theid = "inv";
+                var finid = theid.concat(i);
+                document.getElementById(finid).style.animation = "example7 0.5s";
+                document.getElementById(finid).style.position = "absolute";
+                document.getElementById(finid).style.left = leftt;
+                document.getElementById(finid).style.marginTop = topp;
+                if (leftt == "840px") {
+                    leftt = "305px";
+                    level += 110;
+                    topp = level + "px";
+                } else if (leftt == "305px") {
+                    leftt = "570px";
+                } else if (leftt == "570px") {
+                    leftt = "840px";
+                }
+            }
+        }
+
+        function backtonormal() {
+            document.getElementById("post2").style.visibility = 'visible';
+            document.getElementById("post3").style.visibility = 'visible';
+            document.getElementById("post4").style.visibility = 'visible';
+            document.getElementById("post5").style.visibility = 'visible';
+            document.getElementById("post6").style.visibility = 'visible';
+            document.getElementById("post7").style.visibility = 'visible';
+            document.getElementById("post8").style.visibility = 'visible';
+            document.getElementById("post9").style.visibility = 'visible';
+            document.getElementById("post10").style.visibility = 'visible';
+            document.getElementById("post11").style.visibility = 'visible';
+            document.getElementById("post12").style.visibility = 'visible';
+
+        }
+
+        function popupadd() {
+            hideall();
+            document.getElementById("enterpost").style.visibility = 'visible';
+        }
+
+        function popup(a) {
+            hideall();
+            var theid = "tpost";
+            var finid = theid + a;
+            document.getElementById(finid).style.visibility = 'visible';
+        }
+
+        function hideall() {
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("tpost1").style.visibility = 'hidden';
+            document.getElementById("tpost2").style.visibility = 'hidden';
+            document.getElementById("tpost3").style.visibility = 'hidden';
+            document.getElementById("tpost4").style.visibility = 'hidden';
+            document.getElementById("tpost5").style.visibility = 'hidden';
+            document.getElementById("tpost6").style.visibility = 'hidden';
+            document.getElementById("tpost7").style.visibility = 'hidden';
+            document.getElementById("tpost8").style.visibility = 'hidden';
+            document.getElementById("tpost9").style.visibility = 'hidden';
+            document.getElementById("tpost10").style.visibility = 'hidden';
+            document.getElementById("tpost11").style.visibility = 'hidden';
+            document.getElementById("tpost12").style.visibility = 'hidden';
+            document.getElementById("tpost13").style.visibility = 'hidden';
+            document.getElementById("tpost14").style.visibility = 'hidden';
+            document.getElementById("tpost15").style.visibility = 'hidden';
+            document.getElementById("tpost16").style.visibility = 'hidden';
+            document.getElementById("tpost17").style.visibility = 'hidden';
+            document.getElementById("tpost18").style.visibility = 'hidden';
+            document.getElementById("tpost19").style.visibility = 'hidden';
+            document.getElementById("tpost20").style.visibility = 'hidden';
+            document.getElementById("tpost21").style.visibility = 'hidden';
+            document.getElementById("tpost22").style.visibility = 'hidden';
+            document.getElementById("tpost23").style.visibility = 'hidden';
+            document.getElementById("tpost24").style.visibility = 'hidden';
+        }
+
+        function addanimationtoday() {
+            backtonormal()
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("post2").style.visibility = 'hidden';
+            document.getElementById("post3").style.visibility = 'hidden';
+            document.getElementById("post4").style.visibility = 'hidden';
+            document.getElementById("post5").style.visibility = 'hidden';
+            document.getElementById("post6").style.visibility = 'hidden';
+            document.getElementById("post7").style.visibility = 'hidden';
+            document.getElementById("post8").style.visibility = 'hidden';
+            document.getElementById("post9").style.visibility = 'hidden';
+            document.getElementById("post10").style.visibility = 'hidden';
+            document.getElementById("post11").style.visibility = 'hidden';
+
+            document.getElementById("post12").style.animation = "example3 0.5s";
+            document.getElementById("post12").style.position = "absolute";
+            document.getElementById("post12").style.left = "570px";
+            document.getElementById("post12").style.marginTop = "20px";
+
+            var i;
+            var level = 20;
+            var topp = "20px";
+            var leftt = "840px";
+            for (i = 1; i < added; i++) {
+                var theid = "inv";
+                var finid = theid.concat(i);
+                document.getElementById(finid).style.animation = "example7 0.5s";
+                document.getElementById(finid).style.position = "absolute";
+                document.getElementById(finid).style.left = leftt;
+                document.getElementById(finid).style.marginTop = topp;
+                if (leftt == "840px") {
+                    leftt = "305px";
+                    level += 110;
+                    topp = level + "px";
+                } else if (leftt == "305px") {
+                    leftt = "570px";
+                } else if (leftt == "570px") {
+                    leftt = "840px";
+                }
+            }
+        }
+
+
+
+        function addanimationcomp() {
+            backtonormal()
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("post2").style.visibility = 'hidden';
+            document.getElementById("post3").style.visibility = 'hidden';
+            document.getElementById("post5").style.visibility = 'hidden';
+            document.getElementById("post6").style.visibility = 'hidden';
+            document.getElementById("post7").style.visibility = 'hidden';
+            document.getElementById("post8").style.visibility = 'hidden';
+            document.getElementById("post9").style.visibility = 'hidden';
+            document.getElementById("post10").style.visibility = 'hidden';
+            document.getElementById("post11").style.visibility = 'hidden';
+            document.getElementById("post12").style.visibility = 'hidden';
+
+            document.getElementById("post4").style.animation = "example2 0.5s";
+            document.getElementById("post4").style.position = "absolute";
+            document.getElementById("post4").style.left = "570px";
+            document.getElementById("post4").style.marginTop = "20px";
+        }
+
+        function addanimationnews() {
+            backtonormal()
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("post3").style.visibility = 'hidden';
+            document.getElementById("post2").style.visibility = 'hidden';
+            document.getElementById("post4").style.visibility = 'hidden';
+            document.getElementById("post7").style.visibility = 'hidden';
+            document.getElementById("post9").style.visibility = 'hidden';
+            document.getElementById("post8").style.visibility = 'hidden';
+
+
+            document.getElementById("post12").style.animation = "example3 0.5s";
+            document.getElementById("post12").style.position = "absolute";
+            document.getElementById("post12").style.left = "570px";
+            document.getElementById("post12").style.marginTop = "20px";
+
+
+            document.getElementById("post5").style.animation = "example2 0.5s";
+            document.getElementById("post5").style.position = "absolute";
+            document.getElementById("post5").style.left = "840px";
+            document.getElementById("post5").style.marginTop = "20px";
+
+
+            document.getElementById("post6").style.animation = "example6 0.5s";
+            document.getElementById("post6").style.position = "absolute";
+            document.getElementById("post6").style.left = "305px";
+            document.getElementById("post6").style.marginTop = "130px";
+
+
+            document.getElementById("post10").style.animation = "example4 0.5s";
+            document.getElementById("post10").style.position = "absolute";
+            document.getElementById("post10").style.left = "570px";
+            document.getElementById("post10").style.marginTop = "130px";
+
+
+            document.getElementById("post11").style.animation = "example5 0.5s";
+            document.getElementById("post11").style.position = "absolute";
+            document.getElementById("post11").style.left = "840px";
+            document.getElementById("post11").style.marginTop = "130px";
+        }
+        var added = 1;
+
+        function addanimationadv() {
+            backtonormal()
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById("post4").style.visibility = 'hidden';
+            document.getElementById("post5").style.visibility = 'hidden';
+            document.getElementById("post6").style.visibility = 'hidden';
+            document.getElementById("post10").style.visibility = 'hidden';
+            document.getElementById("post11").style.visibility = 'hidden';
+            document.getElementById("post12").style.visibility = 'hidden';
+            document.getElementById("post7").style.position = "absolute";
+            document.getElementById("post7").style.animation = "example 0.5s";
+            document.getElementById("post7").style.left = "305px";
+            document.getElementById("post7").style.marginTop = "130px";
+
+            document.getElementById("post8").style.position = "absolute";
+            document.getElementById("post8").style.marginTop = "130px";
+            document.getElementById("post8").style.left = "570px";
+            document.getElementById("post8").style.animation = "example1 0.5s";
+
+            document.getElementById("post9").style.position = "absolute";
+            document.getElementById("post9").style.marginTop = "130px";
+            document.getElementById("post9").style.left = "840px";
+            document.getElementById("post9").style.animation = "example1 0.5s";
+
+            var i;
+            for (i = 1; i < 13; i++) {
+                var theid = "inv";
+                var finid = theid.concat(i);
+                document.getElementById(finid).style.visibility = 'hidden';
+            }
+        }
+
+        function add() {
+            var theid = "inv";
+            var finid = theid.concat(added);
+            document.getElementById(finid).style.visibility = 'visible';
+            theid = "titleadd";
+            finid = theid.concat(added);
+            var titleid = "tposttitle" + added;
+            var textid = "tposttext" + added;
+            var posttitle = document.getElementById("thetitle").value;
+            var posttext = document.getElementById("thecontent").value;
+            document.getElementById("thetitle").value = '';
+            document.getElementById("thecontent").value = '';
+            document.getElementById("enterpost").style.visibility = 'hidden';
+            document.getElementById(finid).innerHTML = posttitle;
+            document.getElementById(titleid).innerHTML = posttitle;
+            document.getElementById(textid).innerHTML = posttext;
+            added++;
+
+        }
+
+        var TRange = null;
+
+        function findString(str) {
+            if (str == "news") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
+            }
+            if (str == "News") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
+            }
+            if (str == "NEWS") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/news.html");
+            }
+            if (str == "home") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
+            }
+            if (str == "Home") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
+            }
+            if (str == "HOME") {
+                location.replace("http://localhost:63342/untitled/HW2_62153_ALEXANDAR_TSVETANOV/homes.html");
+            }
+
+
+            if (window.find) {
+                strFound = self.find(str)
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            if (!strFound) alert("String '" + str + "' not found!")
+            return;
+        };
+
+        document.getElementById('f1').onsubmit = function() {
+            findString(this.t1.value);
+            return false;
+        };
+    </script>
 </body>
+
 </html>
 
 
